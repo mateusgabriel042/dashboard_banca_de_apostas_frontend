@@ -64,11 +64,35 @@ const View = ({ match, location }) => {
 								</tr>
 								<tr>
 									<td>Nome</td>
-									<td>{endpointSelected?.name}</td>
+									<td>{endpointSelected?.first_name} {endpointSelected?.last_name}</td>
+								</tr>
+								<tr>
+									<td>Data de nascimento</td>
+									<td>{endpointSelected?.birth_date}</td>
+								</tr>
+								<tr>
+									<td>Sexo</td>
+									<td>{endpointSelected?.sex}</td>
+								</tr>
+								<tr>
+									<td>CPF</td>
+									<td>{endpointSelected?.cpf}</td>
+								</tr>
+								<tr>
+									<td>Ganhos</td>
+									<td>{endpointSelected?.money}</td>
+								</tr>
+								<tr>
+									<td>Telefone movel</td>
+									<td>{endpointSelected?.mobile_phone}</td>
 								</tr>
 								<tr>
 									<td>Email</td>
 									<td>{endpointSelected?.email}</td>
+								</tr>
+								<tr>
+									<td>Usuário (login)</td>
+									<td>{endpointSelected?.username}</td>
 								</tr>
 							</tbody>
 						</Table>

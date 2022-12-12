@@ -1,6 +1,9 @@
 import React, {useState, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
-import { BiTachometer, BiGroup, BiMenu, BiLock, BiUser } from "react-icons/bi";
+import { BiTachometer, BiGroup, BiMenu, BiLock, BiUser, BiFootball } from "react-icons/bi";
+import { SiBetfair } from "react-icons/si";
+
+import { GiReceiveMoney, GiPayMoney } from "react-icons/gi";
 import { RiUserStarLine } from "react-icons/ri";
 import { BsMegaphone } from "react-icons/bs";
 import { AiOutlineAlert } from "react-icons/ai";
@@ -74,39 +77,27 @@ const Sidebar = () => {
 			            </NavLink>
 		            </Can>
 
-		            <Can match={or("user-service:user-service-view", "user-service:user-service-delete", "user-service:user-service-update", "user-service:user-service-create")}>
-			            <NavLink to="/dashboard/user-service/list" activeClassName="activeClicked">
-			            	<RiUserStarLine size="25px" /><label className="lb-link-sidebar">Usuários de serviço</label>
+		            <Can match={or("country:country-view", "country:country-delete", "country:country-update", "country:country-create")}>
+			            <NavLink to="/dashboard/country/list" activeClassName="activeClicked">
+			            	<BiFootball size="25px" /><label className="lb-link-sidebar">Países/Ligas</label>
 			            </NavLink>
 		            </Can>
 
-		            <Can match={or("family:family-view", "family:family-delete", "family:family-update", "family:family-create")}>
-			            <NavLink to="/dashboard/family/list" activeClassName="activeClicked">
-			            	<MdFamilyRestroom size="25px" /><label className="lb-link-sidebar">Famílias</label>
+		            <Can match={or("deposit:deposit-view", "deposit:deposit-delete", "deposit:deposit-update", "deposit:deposit-create")}>
+			            <NavLink to="/dashboard/deposit/list" activeClassName="activeClicked">
+			            	<GiReceiveMoney size="25px" /><label className="lb-link-sidebar">Depósitos</label>
 			            </NavLink>
 		            </Can>
 
-		            <Can match={or("external-institution:external-institution-view", "external-institution:external-institution-delete", "external-institution:external-institution-update", "external-institution:external-institution-create")}>
-			            <NavLink to="/dashboard/external-institution/list" activeClassName="activeClicked">
-			            	<FaRegBuilding size="25px" /><label className="lb-link-sidebar">Instituições externas</label>
+		            <Can match={or("deposit:deposit-view", "deposit:deposit-delete", "deposit:deposit-update", "deposit:deposit-create")}>
+			            <NavLink to="/dashboard/withdraw-money/list" activeClassName="activeClicked">
+			            	<GiPayMoney size="25px" /><label className="lb-link-sidebar">Saques</label>
 			            </NavLink>
 		            </Can>
 
-		            <Can match={or("place-service:place-service-view", "place-service:place-service-delete", "place-service:place-service-update", "place-service:place-service-create")}>
-			            <NavLink to="/dashboard/place-service/list" activeClassName="activeClicked">
-			            	<MdOutlineMapsHomeWork size="25px" /><label className="lb-link-sidebar">Locais de serviço</label>
-			            </NavLink>
-		            </Can>
-
-		            <Can match={or("occurrence:occurrence-view", "occurrence:occurrence-delete", "occurrence:occurrence-update", "occurrence:occurrence-create")}>
-			            <NavLink to="/dashboard/occurrence/list" activeClassName="activeClicked">
-			            	<AiOutlineAlert size="25px" /><label className="lb-link-sidebar">Ocorrências</label>
-			            </NavLink>
-		            </Can>
-
-		            <Can match={or("complaint:complaint-view", "complaint:complaint-delete", "complaint:complaint-update", "complaint:complaint-create")}>
-			            <NavLink to="/dashboard/complaint/list" activeClassName="activeClicked">
-			            	<BsMegaphone size="25px" /><label className="lb-link-sidebar">Denúncias</label>
+		            <Can match={or("deposit:deposit-view", "deposit:deposit-delete", "deposit:deposit-update", "deposit:deposit-create")}>
+			            <NavLink to="/dashboard/bet-purchase/list" activeClassName="activeClicked">
+			            	<SiBetfair size="25px" /><label className="lb-link-sidebar">Apostas</label>
 			            </NavLink>
 		            </Can>
 

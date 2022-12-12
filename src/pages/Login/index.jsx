@@ -51,7 +51,7 @@ const Login = () => {
 					}
 
 					localStorage.setItem('dataUser', JSON.stringify(dataUser));
-					window.location = '/dashboard';
+					window.location.href = '/dashboard';
 				}
 			})
 			.catch(error =>{

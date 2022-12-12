@@ -10,9 +10,9 @@ import './style.css';
 const Overview = () => {
 	const api = apiService.get();
 	const [loading, setLoading] = useState(false);
-	const [allData, setAllData] = useState({});
+	//const [allData, setAllData] = useState({});
 	
-	const dashboardData = () => {
+	/*const dashboardData = () => {
 		setLoading(true);
 	    api.get(`api/dashboard`)
 		.then(resp => {
@@ -23,11 +23,11 @@ const Overview = () => {
 			setLoading(false);
 			verifyError(error);
 		})
-	}
+	}*/
 
 	
 	useEffect(() => {
-		dashboardData();
+		//dashboardData();
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
@@ -47,19 +47,19 @@ const Overview = () => {
 						<>
 							<div className="row mb-4">
 							    <div className="col box-number">
-							    	<span>{allData?.dataUsers?.count}</span>
+							    	<span>0</span>
 							    	<label>Usuários</label>
 							    </div>
 							    <div className="col box-number">
-							    	<span>{allData?.dataUsers?.count}</span>
+							    	<span>0</span>
 							    	<label>Usuários</label>
 							    </div>
 						   		<div className="col box-number">
-						    		<span>{allData?.dataUsers?.count}</span>
+						    		<span>0</span>
 							    	<label>Usuários</label>
 						    	</div>
 						    	<div className="col box-number">
-						    		<span>{allData?.dataUsers?.count}</span>
+						    		<span>0</span>
 							    	<label>Usuários</label>
 						    	</div>
 						    	<div className="col-12 lb-info-numbers-dashboard">

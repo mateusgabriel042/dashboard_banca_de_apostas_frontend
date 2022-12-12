@@ -1,7 +1,7 @@
 div.sidebar {
 	height:100vh;
 	width:300px;
-	background-color:transparent;
+	background-color:#023047;
 	transition:0.5s;
 }
 
@@ -48,10 +48,9 @@ div.sidebar div.area-links a {
 	float:left;
 	width:100%;
 	padding:15px 10px;
-	color:#666666;
+	color:#fdfdfe;
 	transition:0.3s;
 	display:flex;
-	border-radius:0px 15px 15px 0px;
 }
 
 div.sidebar div.area-links a:hover {
@@ -64,8 +63,8 @@ div.sidebar div.area-links a:hover {
 div.sidebar div.area-links a svg {margin:0px 10px;}
 
 .activeClicked {
-	background-color:#023047;
-	color:#ffffff !important;
+	background-color:#fdfdfe;
+	color:#023047 !important;
 }
 .activeClicked:hover {
 	background-color:#023047 !important;
@@ -76,12 +75,11 @@ div.btn-toggle-sidebar button {
 	float:left;
 	width:100%;
 	padding:15px 10px;
-	color:#666666;
+	color:#fdfdfe;
 	transition:0.3s;
 	border:none;
 	background-color:transparent;
 	display:flex;
-	border-radius:0px 15px 15px 0px;
 }
 
 div.btn-toggle-sidebar button:hover {

@@ -123,6 +123,8 @@ const List = ({ match, location }) => {
 										<tr>
 											<th>Nome</th>
 											<th>Email</th>
+											<th>Ganhos</th>
+											<th>Depositos</th>
 											<th>Função</th>
 											<th>Permissões</th>
 											<th>Ações</th>
@@ -131,8 +133,10 @@ const List = ({ match, location }) => {
 									<tbody>
 										{endpointRegisters?.map((item) => (
 											<tr key={item.id}>
-												<td>{item.name}</td>
+												<td>{item.first_name} {item.last_name}</td>
 												<td>{item.email}</td>
+												<td>{item.money}</td>
+												<td>{item?.deposits?.length}</td>
 												<td>
 													{item.role.length > 0 ?
 														(<Button className="button-remove-tag bg-gray">
